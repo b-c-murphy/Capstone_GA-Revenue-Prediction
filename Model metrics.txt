@@ -1,0 +1,313 @@
+Model Metrics
+Blaine Murphy
+October 2021
+
+The final model is a Keras sequential model with 3 32-node layers and can be found in the folder on this repo:
+"final_nn_model_user_revenue"
+
+There is one dropout layer to zero out 20% of the nodes in the first layer.  
+I trained the model with a batch size of 500 and an early stopping criteria to prevent overfitting.
+
+The final metrics for the training set are below
+-- set -- 	-- RMSE -- 
+training	1.629
+validation 	1.639
+test		1.658
+
+
+There are 290 input featuresand they are listed below in order.
+Input features need to be transformed to mean of 0 and deviation of 1 with scaler.
+The standard scaler is saved using 'pickle' in this repo:
+"StandardScaler.pkl"
+
+--- Features ---
+visits
+visitMin
+hitsMedian
+pageviewsStd
+timeDiffLastVisitMax
+timeDiffLastVisitStd
+countryPopulationStd
+countryGDPStd
+countryLEMean
+countryPIUMean
+countryPIUStd
+weekendMean
+bouncesMean
+keywordStoreMean
+keywordMerchMean
+keywordShirtMean
+keywordYoutubeMean
+keywordShopMean
+keywordApparelMean
+keyword_(Remarketing/Content targeting)Mean
+keyword_(User vertical targeting)Mean
+keyword_(automatic matching)Mean
+keyword_(content targeting)Mean
+channelGrouping_(Other)Mean
+channelGrouping_AffiliatesMean
+browser_Amazon SilkMean
+browser_Android WebviewMean
+browser_EdgeMean
+browser_FirefoxMean
+browser_Internet ExplorerMean
+browser_OperaMean
+browser_OtherMean
+browser_SafariMean
+browser_Safari (in-app)Mean
+operatingSystem_AndroidMean
+operatingSystem_Chrome OSMean
+operatingSystem_LinuxMean
+operatingSystem_MacintoshMean
+operatingSystem_OtherMean
+operatingSystem_Windows PhoneMean
+deviceCategory_tabletMean
+subContinent_CaribbeanMean
+subContinent_Central AmericaMean
+subContinent_Central AsiaMean
+subContinent_Eastern AfricaMean
+subContinent_Eastern AsiaMean
+subContinent_Eastern EuropeMean
+subContinent_MelanesiaMean
+subContinent_Micronesian RegionMean
+subContinent_Middle AfricaMean
+subContinent_Northern AfricaMean
+subContinent_Northern EuropeMean
+subContinent_PolynesiaMean
+subContinent_South AmericaMean
+subContinent_Southern AfricaMean
+subContinent_Southern AsiaMean
+subContinent_Southern EuropeMean
+subContinent_Western AfricaMean
+subContinent_Western AsiaMean
+subContinent_Western EuropeMean
+city_AhmedabadMean
+city_AmsterdamMean
+city_Ann ArborMean
+city_AthensMean
+city_AtlantaMean
+city_AtwaterMean
+city_AustinMean
+city_BangkokMean
+city_BarcelonaMean
+city_BarrieMean
+city_BellevueMean
+city_BengaluruMean
+city_BerkeleyMean
+city_BerlinMean
+city_BogotaMean
+city_BostonMean
+city_BothellMean
+city_BoulderMean
+city_BucharestMean
+city_Buenos AiresMean
+city_CalgaryMean
+city_CambridgeMean
+city_CharlotteMean
+city_ChicagoMean
+city_CincinnatiMean
+city_ColumbusMean
+city_Council BluffsMean
+city_CupertinoMean
+city_DallasMean
+city_DenverMean
+city_DetroitMean
+city_DubaiMean
+city_DublinMean
+city_DundalkMean
+city_El PasoMean
+city_EvanstonMean
+city_Fort CollinsMean
+city_Fort WorthMean
+city_FremontMean
+city_FresnoMean
+city_Goose CreekMean
+city_HamburgMean
+city_Hong KongMean
+city_HoustonMean
+city_IndianapolisMean
+city_IrvineMean
+city_IstanbulMean
+city_JacksonvilleMean
+city_JakartaMean
+city_Jersey CityMean
+city_KirklandMean
+city_KitchenerMean
+city_Kuala LumpurMean
+city_La VictoriaMean
+city_Lake OswegoMean
+city_Las VegasMean
+city_LenoirMean
+city_LondonMean
+city_Los AngelesMean
+city_MaracaiboMean
+city_MelbourneMean
+city_Menlo ParkMean
+city_Mexico CityMean
+city_MiamiMean
+city_MilpitasMean
+city_MilwaukeeMean
+city_MinatoMean
+city_MontrealMean
+city_Mountain ViewMean
+city_MumbaiMean
+city_NashvilleMean
+city_New DelhiMean
+city_New YorkMean
+city_North AttleboroughMean
+city_OaklandMean
+city_OmahaMean
+city_OrlandoMean
+city_OttawaMean
+city_Palo AltoMean
+city_ParisMean
+city_PhiladelphiaMean
+city_PhoenixMean
+city_PittsburghMean
+city_PleasantonMean
+city_PortlandMean
+city_PragueMean
+city_Quezon CityMean
+city_QuitoMean
+city_RaleighMean
+city_RedmondMean
+city_Redwood CityMean
+city_Rio de JaneiroMean
+city_RiversideMean
+city_SacramentoMean
+city_SalemMean
+city_Salt Lake CityMean
+city_San AntonioMean
+city_San BrunoMean
+city_San DiegoMean
+city_San FranciscoMean
+city_San JoseMean
+city_San MarcosMean
+city_San MateoMean
+city_Sandy SpringsMean
+city_Santa ClaraMean
+city_SantiagoMean
+city_Sao PauloMean
+city_SaratogaMean
+city_SeattleMean
+city_SeoulMean
+city_SingaporeMean
+city_South San FranciscoMean
+city_StockholmMean
+city_SunnyvaleMean
+city_SydneyMean
+city_SyracuseMean
+city_TbilisiMean
+city_Tel Aviv-YafoMean
+city_TempeMean
+city_TigardMean
+city_TorontoMean
+city_TunisMean
+city_VancouverMean
+city_ViennaMean
+city_Walnut CreekMean
+city_WarsawMean
+city_WashingtonMean
+city_YokohamaMean
+city_ZurichMean
+city_noPurchaseCityMean
+state_ConnecticutMean
+state_HawaiiMean
+state_IdahoMean
+state_KansasMean
+state_KentuckyMean
+state_LouisianaMean
+state_MarylandMean
+state_MinnesotaMean
+state_MissouriMean
+state_MontanaMean
+state_NevadaMean
+state_New JerseyMean
+state_OklahomaMean
+state_OregonMean
+state_UtahMean
+state_VirginiaMean
+state_West VirginiaMean
+state_WisconsinMean
+campaign_AW - ApparelMean
+campaign_AW - Dynamic Search Ads Whole SiteMean
+campaign_AW - ElectronicsMean
+campaign_All ProductsMean
+campaign_Data ShareMean
+campaign_Retail (DO NOT EDIT owners nophakun and tianyu)Mean
+campaign_test-liyuhzMean
+source_(direct)Mean
+source_LumpedNoConversionMean
+source_askMean
+source_basecamp.comMean
+source_bingMean
+source_calendar.google.comMean
+source_chat.google.comMean
+source_connect.googleforwork.comMean
+source_dealspotr.comMean
+source_dfaMean
+source_docs.google.comMean
+source_duckduckgo.comMean
+source_facebook.comMean
+source_gatewaycdi.comMean
+source_gdeals.googleplex.comMean
+source_google.comMean
+source_googleux.perksplus.comMean
+source_groups.google.comMean
+source_keep.google.comMean
+source_l.facebook.comMean
+source_l.messenger.comMean
+source_m.facebook.comMean
+source_mail.aol.comMean
+source_mail.google.comMean
+source_mall.googleplex.comMean
+source_mg.mail.yahoo.comMean
+source_moma.corp.google.comMean
+source_outlook.live.comMean
+source_phandroid.comMean
+source_pinterest.comMean
+source_plus.google.comMean
+source_quora.comMean
+source_reddit.comMean
+source_search.myway.comMean
+source_search.xfinity.comMean
+source_seroundtable.comMean
+source_siliconvalley.about.comMean
+source_sites.google.comMean
+source_t.coMean
+source_trainup.withgoogle.comMean
+source_us-mg5.mail.yahoo.comMean
+source_yahooMean
+source_youtube.comMean
+month_1Mean
+month_3Mean
+month_4Mean
+month_5Mean
+month_6Mean
+month_7Mean
+month_8Mean
+month_9Mean
+month_10Mean
+month_12Mean
+hour_0Mean
+hour_1Mean
+hour_2Mean
+hour_3Mean
+hour_4Mean
+hour_5Mean
+hour_6Mean
+hour_7Mean
+hour_8Mean
+hour_9Mean
+hour_10Mean
+hour_11Mean
+hour_12Mean
+hour_13Mean
+hour_14Mean
+hour_15Mean
+hour_16Mean
+hour_18Mean
+hour_19Mean
+hour_20Mean
+hour_21Mean
+hour_22Mean
