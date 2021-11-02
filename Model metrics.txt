@@ -15,9 +15,9 @@ validation 	1.639
 test		1.658
 
 
-There are 290 input featuresand they are listed below in order.
+There are 290 input features and they are listed below in order.
 Input features need to be transformed to mean of 0 and deviation of 1 with scaler.
-The standard scaler is saved using 'pickle' in this repo:
+The standard scaler trained on the training set is saved using 'pickle' in this repo:
 "StandardScaler.pkl"
 
 --- Features ---
